@@ -1,0 +1,48 @@
+\section{Methodology}
+
+1. Sensor Selection and Data Collection:
+ECG The primary sensor capturing the heart's electrical activity for VT identification.
+Accelerometer: Measures body movement and activity level, potentially influencing VT occurrence.
+Gyroscope: Tracks body orientation and changes in posture, providing insights into VT triggers.
+
+2. Data Sources and Preprocessing:
+Open-source datasets:
+
+PhysioNet CPSC2011 Database: Synchronized ECG, accelerometer, and gyroscope data from patients with and without VT, accessed through PhysioNet's online platform.
+BIDMC PhysioNet Challenge 2015: ECG and PPG recordings with VT labels and additional physiological signals, requiring participation in the challenge or collaboration.
+Pre-processing steps:
+
+Data cleaning: Removing noise, artifacts, and handling missing values.
+Synchronization: Aligning data from different sensors for accurate analysis.
+Feature engineering: Extracting relevant features from multi-sensor data (e.g., ECG morphology, heart rate variability, movement patterns).
+Data segmentation: Dividing continuous data into windows for model training and testing.
+3. Machine Learning Algorithms:
+Deep learning:
+
+Convolutional Neural Networks (CNNs): Effective for extracting complex features from multi-sensor data, enhancing VT detection accuracy.
+Recurrent Neural Networks (RNNs): Capturing temporal dependencies within data, improving early-stage VT episode detection.
+Ensemble methods:
+
+Combining CNNs and RNNs to leverage their strengths for improved overall detection performance.
+Personalized models:
+
+Training models on individual patient data,
+incorporating pre-existing conditions and sensor patterns for personalized VT risk prediction.
+
+4. Evaluation Metrics:
+General Model Evaluation:
+
+Accuracy: Proportion of correctly detected VT episodes.
+Sensitivity: Ability to identify true VT episodes, minimizing false negatives.
+Specificity: Ability to distinguish VT from other rhythms, minimizing false positives.
+Area Under the ROC Curve (AUC): Measures overall model performance for VT detection.
+F1-score: Balanced metric considering both precision (correct positive detections) and recall (true positive rate).
+Personalized risk prediction metrics:
+
+AUC for individual VT risk prediction: Based on sensor data and pre-existing conditions.
+Brier score: Measures the calibration of predicted VT probability compared to actual VT events.
+5. Model Training and Testing:
+Data divided into training, validation, and testing sets for robust model development and evaluation.
+Hyperparameter tuning to optimize machine learning algorithms for chosen data and metrics.
+Cross-validation techniques used to assess model generalizability to unseen data.
+This methodology provides a structured plan for collecting, preprocessing, and analyzing multi-sensor data to achieve accurate and personalized VT detection. The selected machine learning algorithms and evaluation metrics are tailored to address the specific challenges outlined in the literature review. Adaptations can be made based on the research focus and available resources. Feel free to seek further clarification on any aspect of the methodology.
